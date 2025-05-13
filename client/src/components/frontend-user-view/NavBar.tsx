@@ -2,7 +2,6 @@ import logo from '../../assets/colorspalette.png'; // Assuming you have a logo i
 import { useTheme } from "@/components/theme/ThemeContext";
 import { Switch } from "@/components/ui/switch";
 import { useEffect } from "react";
-import { AiOutlineSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 
