@@ -1,7 +1,6 @@
 import logo from '../../assets/colorspalette.png'; // Assuming you have a logo image in your assets folder
 import { useTheme } from "@/components/theme/ThemeContext";
 import { Switch } from "@/components/ui/switch";
-import { use, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
