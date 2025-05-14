@@ -11,7 +11,7 @@ function HomePage() {
 
         <div className="flex">
           <SideBar />
-          <div className="w-full">ad</div>
+          <div className="w-full"></div>
         </div>
     </div>
   );

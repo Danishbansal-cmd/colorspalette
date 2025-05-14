@@ -1,15 +1,14 @@
 import logo from '../../assets/colorspalette.png'; // Assuming you have a logo image in your assets folder
 import { useTheme } from "@/components/theme/ThemeContext";
 import { Switch } from "@/components/ui/switch";
-import { useEffect } from "react";
+import { use, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
 function NavBar() {
     const { theme, toggleTheme } = useTheme();
-    useEffect(() => {
-        document.body.setAttribute('class', theme);
-    }, [theme]);
+    const isDark = theme === 'dark';
+
     return (
         <div className="h-[var(--navbar-height)] flex items-center justify-between border-b border-gray-300 dark:border-gray-700">
             <div className="min-w-50 px-5" for-logo>
@@ -25,7 +24,12 @@ function NavBar() {
 
 
             <div className='flex items-center justify-end gap-3 min-w-70 px-5 '>
-                <Switch onClick={toggleTheme} />
+                <Switch 
+                    onClick={toggleTheme} 
+                    checked={isDark}
+                    className={`relative inline-flex h-7 w-12 items-center rounded-full`}
+                    thumbClassName='data-[state=checked]:translate-x-6 data-[state=unchecked]:translate-x-[3px] w-5 h-5'
+                />
 
                 <div className="h-8 w-px bg-gray-300" />
 
